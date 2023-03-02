@@ -1,32 +1,46 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ViewStyle,
-  StyleProp,
-  TextStyle,
-  Button,
-} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import {Fab} from '../components/Fab';
 
 export const CounterScreen = () => {
-  const viewStyle: StyleProp<ViewStyle> = {
+  const [counter, setCounter] = useState<number>(10);
+
+  return (
+    <View style={style.container}>
+      <Text style={style.title}>Counter: {counter}</Text>
+
+      <Fab
+        title="-1"
+        onPress={() => setCounter(counter - 1)}
+        position={style.fabLocationBottomLeft}
+      />
+
+      <Fab
+        title="+1"
+        onPress={() => setCounter(counter + 1)}
+        position={style.fabLocationBottomRight}
+      />
+    </View>
+  );
+};
+
+const style = StyleSheet.create({
+  container: {
     flex: 1,
     backgroundColor: 'white',
     justifyContent: 'center',
     top: -10,
-  };
-
-  const textStyle: StyleProp<TextStyle> = {
+  },
+  title: {
     fontSize: 40,
     textAlign: 'center',
-  };
-
-  const [counter, setCounter] = useState<number>(10);
-
-  return (
-    <View style={viewStyle}>
-      <Text style={textStyle}>Counter: {counter}</Text>
-      <Button title="CLick" onPress={() => setCounter(counter + 1)} />
-    </View>
-  );
-};
+  },
+  fabLocationBottomRight: {
+    bottom: 25,
+    right: 25,
+  },
+  fabLocationBottomLeft: {
+    bottom: 25,
+    left: 25,
+  },
+});
