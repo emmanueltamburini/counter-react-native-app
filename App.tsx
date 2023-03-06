@@ -1,6 +1,17 @@
 import React from 'react';
-import {CounterScreen} from './src/screens/CounterScreen';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import {DimensionsScreen} from './src/screens/DimensionsScreen';
 
 export const App = () => {
-  return <CounterScreen />;
+  return (
+    <SafeAreaView style={styles.container}>
+      <DimensionsScreen />
+    </SafeAreaView>
+  );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
