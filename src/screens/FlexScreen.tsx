@@ -16,19 +16,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#28C4D9',
     flexDirection: 'row',
+    justifyContent: 'space-evenly',
   },
   box1: {
-    width: 100,
     borderWidth: 2,
     borderColor: 'white',
   },
   box2: {
-    width: 100,
     borderWidth: 2,
     borderColor: 'white',
   },
   box3: {
-    width: 100,
     borderWidth: 2,
     borderColor: 'white',
   },
