@@ -15,19 +15,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#28C4D9',
+    flexDirection: 'row',
   },
   box1: {
-    flex: 0.4,
+    width: 100,
     borderWidth: 2,
     borderColor: 'white',
   },
   box2: {
-    flex: 0.4,
+    width: 100,
     borderWidth: 2,
     borderColor: 'white',
   },
   box3: {
-    flex: 0.2,
+    width: 100,
     borderWidth: 2,
     borderColor: 'white',
   },
