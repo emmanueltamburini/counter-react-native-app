@@ -1,11 +1,11 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {FlexScreen} from './src/screens/FlexScreen';
+import {Assignment} from './src/screens/Assignment';
 
 export const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <FlexScreen />
+      <Assignment />
     </SafeAreaView>
   );
 };
